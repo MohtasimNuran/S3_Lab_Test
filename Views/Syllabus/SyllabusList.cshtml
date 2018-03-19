@@ -1,0 +1,46 @@
+﻿@using S3_WebApplication.Models
+@{
+    ViewBag.Title = "SyllabusList";
+
+    List<ViewList> viewLists = ViewBag.AllList;
+}
+
+<h2>SyllabusList</h2>
+@{
+    int temp = 0;
+    <table class="table table-bordered">
+        <tr>
+            <td>Action</td>
+            <td>Syllabus</td>
+            <td>Trade</td>
+            <td>Level</td>
+            <td>Uploaded Syllabus</td>
+            <td>Uploaded Testplan</td>
+            <td>Languages</td>
+        </tr>
+        @foreach (var item in viewLists)
+        {
+
+            <tr>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = item.Id }) </td>
+                <td>@item.SyllabusName</td>
+                <td>@item.TradeName</td>
+                <td>@item.LevelName</td>
+                @*                <td>@item.SylDoc</td>*@
+                <td>
+
+                    @Html.ActionLink(@item.SylDoc, "Download", new { filePath = @item.SylDoc })
+
+                </td>
+                @*                <td>@item.TestDoc</td>*@
+                <td>
+
+                    @Html.ActionLink(@item.TestDoc, "Download", new { filePath = @item.TestDoc })
+
+                </td>
+                <td>@item.Language</td>
+            </tr>
+
+        }
+    </table>
+}

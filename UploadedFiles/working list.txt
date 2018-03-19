@@ -1,0 +1,138 @@
+0. Nupuit
+1. Up work
+2. Crime Investigation
+3. Online exam
+4. Bidding
+
+
+
+RJ@hamlet
+00026
+
+kajer list
+client list
+partner list
+
+
+notification table "select seeker" "complete" "review" (id, jobseekerId, postjobId, comments, status[read, unread]) 
+#213bbc
+
+
+Enterprise: NJVYC-BMHX2-G77MM-4XJMR-6Q8QF
+Professional: KBJFW-NXHK6-W4WJM-CRMQB-G3CDH
+
+
+
+
+job list - job seeker - job provider- partial - category
+notification - job provider
+search - job provider- job seeker
+review - job seeker
+edit profile - job seeker - job provider
+
+
+
+after completing 
+notification---applied with details.
+search bar
+
+
+palash.iit03@gmail.com
+
+NPHDF-BXP6K-XX2VP-F7WR2-BTDM7
+
+
+
+
+
+
+
+
+<form action="personalInfo.php" method="post" class="">
+                                                        <!-- *******PAYPAL******** -->
+                                                        <input type="hidden" name="cmd" value="_xclick">
+                                                        <input type="hidden" name="business" value="dinhvantrang-facilitator@outlook.com">
+                                                        <input type="hidden" name="item_name" value="PLAN UP Event Registration">
+                                                        <input type="hidden" name="item_number" value="1">
+                                                        <input type="hidden" name="return" value="http://planup.haintheme.com/home-page-v-2//?action=success&payment_method=Paypal">
+                                                        <input type="hidden" name="rm" value="2">
+                                                        <input type="hidden" name="cancel_return" value="http://planup.haintheme.com/home-page-v-2//?action=done">
+                                                        <!-- ********************** -->
+                                                        <input type="text" name="mail_chimp" value="//haintheme.us9.list-manage.com/subscribe/post?u=5339fb3cde1e7a889a5277837&amp;id=94ee5cede6" class="hidden">
+                                                        <h3 class="form-title"><i class="ion-ios-compose" style="margin-right: 10px;"></i>Online Event Register Form</h3>
+                                                        <label class="c-label half">
+                                                            Name*
+                                                            <input name="Name" class="c-input hidden" id="Name" type="text">
+                                                            <!-- *******PAYPAL******** -->
+                                                            <input name="Name" class="c-input required" id="Name" type="text" required value="">
+                                                            <!-- ********************* -->
+                                                        </label><br />
+                                                        <label class="c-label half float-right"><br/>
+                                                            Facebook Link*
+                                                            <input name="Fb_Link" class="c-input hidden" id="Fb_Link" type="text">
+                                                            <!-- *******PAYPAL******** -->
+                                                            <input name="Fb_Link" class="c-input required" id="Fb_Link" type="text" required value="">
+                                                            <!-- ********************* -->
+                                                        </label><br />
+                                                        <label class="c-label half"><br/>
+                                                            Email*
+                                                            <input name="Email" class="email c-input hidden" id="Email" type="email">
+                                                            <!-- *******PAYPAL******** -->
+                                                            <input name="Email" class="required email c-input" id="Email" type="email" required value="">
+                                                            <!-- ********************* -->
+                                                        </label><br />
+                                                        <label class="c-label half float-right"><br/>
+                                                            Phone*
+                                                            <input name="Phone" class="c-input" id="Phone" type="text" value="">
+                                                        </label><br />
+                                                        <label class="c-label half float-left"><br/>
+                                                            Select your type*
+                                                            <input type="hidden" value="USD" name="currency_code" class="price-currency">
+                                                            <select name="Type">
+                                                                <option value="Student">Student</option>
+                                                                <option value="NonStudent">Non Student</option>
+                                                                <option value="International">International</option>
+                                                            </select>
+                                                        </label><br />
+                                                        <label class="c-label half float-right"><br/>
+                                                            Institute*
+                                                            <input name="Instituite" class="c-input" id="Instituite" type="text">
+                                                        </label>
+                                                        <br />
+                                                        <label class="c-label full-width mail-chimp">
+                                                            Subscribe for newsletter
+                                                            <br>
+                                                            <input type="checkbox" checked value="1" name="MAILCHIMP"><span class="desc">Don’t want to miss anything from this special event. Join our newsletter and stay up-to-date by using your email above.</span>
+                                                        </label>
+                                                        <input id="mc-embedded-subscribe" type="submit" name="Submit" class="ht-btn fw-btn fw-btn-1" value="Submit">
+                                                    </form>
+
+
+
+
+
+Hosting Control Panel:
+
++===================================+
+| New Account Info |
++===================================+
+| Domain: osbsp.com
+| URL:  http://cp.alpha.net.bd/cpanel
+| UserName:  osbsp
+| PassWord:   IB.Bye*^9m6Z
+| Quota: 500 Meg
+| NameServer1: ns5.ancbd.com
+| NameServer2: ns6.ancbd.com
+| Webmail: http://yourdomain/webmail
+| POP3/SMTP/IMAP: mail.yourdomain.com
+| Contact Email:  nupuit@gmail.com
+| Package: alphanet  500 MB   hosting
+| Feature List: default
+| Language: en
++===================================+
+
+
+
+jehetu wednesday ar thursday xm nis nai, tokhn sobai vabse tahole xm ekbare bondher porei hbe, ar sobai eitao jane je jedin dept khule sedin semester xm suru hoy na, so oidike kisudin time thakbe tahole tokhn xm neoa hbe hoyto...
+ar onekei ase jara ar ei shiter chhuti te ghurte jaoar jonno eto kisu na vebei ticket kete rakhse...jader ktha VC maam nijeo chinta korse bole chhuti pichhay dilo na...eisober pore thik vul vabar obokash nai, sobar perspective alada...
+ar amr khubi hassokor lage je Aditi maam je dept khula thakle dept ase na, se vacatione asbe xm nite...#jiboneo_eto_boro_comment_likhi_nai 

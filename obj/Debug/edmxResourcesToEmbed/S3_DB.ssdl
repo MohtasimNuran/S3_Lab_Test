@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LABTestDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblLanguages">
+    <Key>
+      <PropertyRef Name="colLanguageId" />
+    </Key>
+    <Property Name="colLanguageId" Type="int" Nullable="false" />
+    <Property Name="colLanguageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="colLanguageShortName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="colSerialNo" Type="int" />
+  </EntityType>
+  <EntityType Name="tblLevels">
+    <Key>
+      <PropertyRef Name="colLevelId" />
+    </Key>
+    <Property Name="colLevelId" Type="int" Nullable="false" />
+    <Property Name="colLevelName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="colLevelShortName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="colLevelDescription" Type="varchar" MaxLength="200" />
+    <Property Name="colChineseLevelName" Type="nvarchar" MaxLength="100" />
+    <Property Name="colThaiLevelName" Type="nvarchar" MaxLength="100" />
+    <Property Name="colTamilLevelName" Type="nvarchar" MaxLength="100" />
+    <Property Name="colKoreanLevelName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblSyllabus">
+    <Key>
+      <PropertyRef Name="colSyllabusId" />
+    </Key>
+    <Property Name="colSyllabusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="colSyllabusName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="colTradeId" Type="int" />
+    <Property Name="colLevelId" Type="int" />
+    <Property Name="colSyllabusDocUrl" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="colTestPlanUrl" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="colDevelopmentOfficer" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="colManager" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="colUploadBy" Type="int" />
+    <Property Name="colUploadDt" Type="datetime" />
+    <Property Name="colActiveDt" Type="datetime" />
+    <Property Name="colSt" Type="bit" />
+    <Property Name="colEndDt" Type="datetime" />
+    <Property Name="colTheoryId" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="tblSyllabusLanguages">
+    <Key>
+      <PropertyRef Name="colSyllabusId" />
+      <PropertyRef Name="colLanguageId" />
+    </Key>
+    <Property Name="colSyllabusId" Type="int" Nullable="false" />
+    <Property Name="colLanguageId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTrades">
+    <Key>
+      <PropertyRef Name="colTradeId" />
+    </Key>
+    <Property Name="colTradeId" Type="int" Nullable="false" />
+    <Property Name="colTradeCode" Type="varchar" MaxLength="50" />
+    <Property Name="colTradeName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="colCategoryId" Type="int" Nullable="false" />
+    <Property Name="colAbbreviation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="colSt" Type="bit" Nullable="false" />
+    <Property Name="colChineseTradeName" Type="nvarchar" MaxLength="400" />
+    <Property Name="colThaiTradeName" Type="nvarchar" MaxLength="400" />
+    <Property Name="colTamilTradeName" Type="nvarchar" MaxLength="400" />
+    <Property Name="colKoreanTradeName" Type="nvarchar" MaxLength="400" />
+  </EntityType>
+  <EntityContainer Name="LABTestDBModelStoreContainer">
+    <EntitySet Name="tblLanguages" EntityType="Self.tblLanguages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLevels" EntityType="Self.tblLevels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSyllabus" EntityType="Self.tblSyllabus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSyllabusLanguages" EntityType="Self.tblSyllabusLanguages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrades" EntityType="Self.tblTrades" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,192 @@
+﻿@model tblSyllabu
+@{
+    ViewBag.Title = "Edit";
+    List<int> selectedLanguage = ViewBag.SelectedLanguage;
+
+    var count = ViewBag.Message;
+    if (count == 0)
+    {
+        Response.Write("<script>alert('Please upload csv or pdf');</script>");
+    }
+}
+
+
+
+
+
+<h2>Edit</h2>
+<hr />
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-8">
+            Trade :
+            <select required class="form-control" name="Trade" oninvalid="this.setCustomValidity('Trade is required')"
+                    onchange=" this.setCustomValidity('') ">
+                @if (ViewBag.TradeList != null)
+                {
+                    <option> </option>
+                    foreach (var item in ViewBag.TradeList)
+                    {
+                        if (Convert.ToInt16(item.Value) == Model.colTradeId)
+                        {
+                            <option value="@item.Value" selected>
+                                @item.Text
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value">
+                                @item.Text
+                            </option>
+                        }
+                    }
+                }
+            </select>
+
+            <br />
+
+            Level :
+            <select required class="form-control" name="Level" oninvalid="this.setCustomValidity('Level is required')"
+                    onchange=" this.setCustomValidity('') ">
+                @if (ViewBag.LevelList != null)
+                {
+                    <option> </option>
+                    foreach (var item in ViewBag.LevelList)
+                    {
+                        if (Convert.ToInt16(item.Value) == Model.colLevelId)
+                        {
+                            <option value="@item.Value" selected>
+                                @item.Text
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value">
+                                @item.Text
+                            </option>
+                        }
+                    }
+                }
+            </select>
+            <br />
+
+
+
+            Syllabus Name <input type="text" class="form-control" name="SyllabusName" required value="@Model.colSyllabusName" oninvalid="this.setCustomValidity('Syllabus Name is required')"
+                                 onchange=" this.setCustomValidity('') " />
+
+            <br />
+
+            Syllabus Upload
+
+            @{
+                if (Model.colSyllabusDocUrl.IsEmpty())
+                {
+                    <input type="file" id="sylFile" class="form-control" required name="sylFile" value="@Model.colSyllabusDocUrl" />@Model.colSyllabusDocUrl
+                    <br />
+                }
+                else
+                {
+                    <input type="file" id="sylFile" class="form-control" name="sylFile" value="@Model.colSyllabusDocUrl" />@Model.colSyllabusDocUrl
+                    <br />
+                }
+            }
+
+
+            Test Plan Upload
+            @{
+                if (@Model.colTestPlanUrl.IsEmpty())
+                {
+                    <input type="file" id="testPlanFile" required="" class="form-control" name="testPlanFile" src="@Model.colTestPlanUrl" value="@Model.colTestPlanUrl" />@Model.colTestPlanUrl
+                    <br />
+                }
+                else
+                {
+                    <input type="file" id="testPlanFile" class="form-control" name="testPlanFile" src="@Model.colTestPlanUrl" value="@Model.colTestPlanUrl" />@Model.colTestPlanUrl
+                    <br />
+                }
+            }
+
+
+            Development Officer
+            <input type="text" class="form-control" name="DevelopmentOfficer" required value="@Model.colDevelopmentOfficer" oninvalid="this.setCustomValidity('Development Officer is required')"
+                   onchange=" this.setCustomValidity('') " />
+
+            <br />
+
+            Manager
+            <input type="text" class="form-control" name="Manager" value="@Model.colManager" required oninvalid="this.setCustomValidity('Manager is required')"
+                   onchange=" this.setCustomValidity('') " />
+
+            <br />
+
+            Active Date
+            @{
+                var dt = Convert.ToDateTime(Model.colActiveDt);
+                var activeDate = String.Format("{0:yyyy-MM-dd}", dt);
+
+
+            }
+            <input type="date" class="form-control" name="ActiveDate" value="@activeDate" required oninvalid="this.setCustomValidity('Date is required')"
+                   onchange=" this.setCustomValidity('') " />
+
+        </div>
+        <div class="col-md-4">
+            Language :
+            @foreach (var item in ViewBag.LanguageList)
+            {
+                <table>
+                    <tr>
+                        <td>
+                            @if (selectedLanguage.Contains(Convert.ToInt16(item.Value)))
+                            {
+                                <input name="Item" checked type="checkbox" value="@item.Value" />
+
+                            }
+                            else
+                            {
+                                <input name="Item" type="checkbox" value="@item.Value" />
+
+                            }
+                        </td>
+                        <td>&nbsp; @item.Text</td>
+                    </tr>
+                </table>
+
+
+            }
+
+            <br />
+        </div>
+    </div>
+
+    <br />
+
+    <input type="submit" value="Load" class="btn btn-success" />
+</form>
+
+
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script language="javascript">
+    function Checkfiles() {
+        var fup = document.getElementById('sylFile');
+        var fup2 = document.getElementById('testPlanFile');
+        var fileName = fup.value;
+        var fileName2 = fup2.value;
+        var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+        var ext2 = fileName2.substring(fileName2.lastIndexOf('.') + 1);
+        if ((ext == "pdf" || ext == "csv" || ext == "PDF" || ext == "CSV") && (ext2 == "pdf" || ext2 == "csv" || ext2 == "PDF" || ext2 == "CSV")) {
+            return true;
+        }
+        else {
+            alert("Upload pdf or csv images only");
+            fup.focus();
+            fup2.focus();
+            return false;
+        }
+    }
+</script>

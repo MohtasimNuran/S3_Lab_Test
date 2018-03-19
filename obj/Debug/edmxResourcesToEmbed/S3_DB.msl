@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LABTestDBModelStoreContainer" CdmEntityContainer="LABTestDBEntities">
+    <EntitySetMapping Name="tblLanguages">
+      <EntityTypeMapping TypeName="LABTestDBModel.tblLanguage">
+        <MappingFragment StoreEntitySet="tblLanguages">
+          <ScalarProperty Name="colLanguageId" ColumnName="colLanguageId" />
+          <ScalarProperty Name="colLanguageName" ColumnName="colLanguageName" />
+          <ScalarProperty Name="colLanguageShortName" ColumnName="colLanguageShortName" />
+          <ScalarProperty Name="colSerialNo" ColumnName="colSerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLevels">
+      <EntityTypeMapping TypeName="LABTestDBModel.tblLevel">
+        <MappingFragment StoreEntitySet="tblLevels">
+          <ScalarProperty Name="colLevelId" ColumnName="colLevelId" />
+          <ScalarProperty Name="colLevelName" ColumnName="colLevelName" />
+          <ScalarProperty Name="colLevelShortName" ColumnName="colLevelShortName" />
+          <ScalarProperty Name="colLevelDescription" ColumnName="colLevelDescription" />
+          <ScalarProperty Name="colChineseLevelName" ColumnName="colChineseLevelName" />
+          <ScalarProperty Name="colThaiLevelName" ColumnName="colThaiLevelName" />
+          <ScalarProperty Name="colTamilLevelName" ColumnName="colTamilLevelName" />
+          <ScalarProperty Name="colKoreanLevelName" ColumnName="colKoreanLevelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSyllabus">
+      <EntityTypeMapping TypeName="LABTestDBModel.tblSyllabu">
+        <MappingFragment StoreEntitySet="tblSyllabus">
+          <ScalarProperty Name="colSyllabusId" ColumnName="colSyllabusId" />
+          <ScalarProperty Name="colSyllabusName" ColumnName="colSyllabusName" />
+          <ScalarProperty Name="colTradeId" ColumnName="colTradeId" />
+          <ScalarProperty Name="colLevelId" ColumnName="colLevelId" />
+          <ScalarProperty Name="colSyllabusDocUrl" ColumnName="colSyllabusDocUrl" />
+          <ScalarProperty Name="colTestPlanUrl" ColumnName="colTestPlanUrl" />
+          <ScalarProperty Name="colDevelopmentOfficer" ColumnName="colDevelopmentOfficer" />
+          <ScalarProperty Name="colManager" ColumnName="colManager" />
+          <ScalarProperty Name="colUploadBy" ColumnName="colUploadBy" />
+          <ScalarProperty Name="colUploadDt" ColumnName="colUploadDt" />
+          <ScalarProperty Name="colActiveDt" ColumnName="colActiveDt" />
+          <ScalarProperty Name="colSt" ColumnName="colSt" />
+          <ScalarProperty Name="colEndDt" ColumnName="colEndDt" />
+          <ScalarProperty Name="colTheoryId" ColumnName="colTheoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSyllabusLanguages">
+      <EntityTypeMapping TypeName="LABTestDBModel.tblSyllabusLanguage">
+        <MappingFragment StoreEntitySet="tblSyllabusLanguages">
+          <ScalarProperty Name="colSyllabusId" ColumnName="colSyllabusId" />
+          <ScalarProperty Name="colLanguageId" ColumnName="colLanguageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrades">
+      <EntityTypeMapping TypeName="LABTestDBModel.tblTrade">
+        <MappingFragment StoreEntitySet="tblTrades">
+          <ScalarProperty Name="colTradeId" ColumnName="colTradeId" />
+          <ScalarProperty Name="colTradeCode" ColumnName="colTradeCode" />
+          <ScalarProperty Name="colTradeName" ColumnName="colTradeName" />
+          <ScalarProperty Name="colCategoryId" ColumnName="colCategoryId" />
+          <ScalarProperty Name="colAbbreviation" ColumnName="colAbbreviation" />
+          <ScalarProperty Name="colSt" ColumnName="colSt" />
+          <ScalarProperty Name="colChineseTradeName" ColumnName="colChineseTradeName" />
+          <ScalarProperty Name="colThaiTradeName" ColumnName="colThaiTradeName" />
+          <ScalarProperty Name="colTamilTradeName" ColumnName="colTamilTradeName" />
+          <ScalarProperty Name="colKoreanTradeName" ColumnName="colKoreanTradeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

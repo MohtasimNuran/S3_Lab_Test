@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LABTestDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblLanguage">
+    <Key>
+      <PropertyRef Name="colLanguageId" />
+    </Key>
+    <Property Name="colLanguageId" Type="Int32" Nullable="false" />
+    <Property Name="colLanguageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colLanguageShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colSerialNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblLevel">
+    <Key>
+      <PropertyRef Name="colLevelId" />
+    </Key>
+    <Property Name="colLevelId" Type="Int32" Nullable="false" />
+    <Property Name="colLevelName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colLevelShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colLevelDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="colChineseLevelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="colThaiLevelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="colTamilLevelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="colKoreanLevelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSyllabu">
+    <Key>
+      <PropertyRef Name="colSyllabusId" />
+    </Key>
+    <Property Name="colSyllabusId" Type="Int32" Nullable="false" />
+    <Property Name="colSyllabusName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colTradeId" Type="Int32" />
+    <Property Name="colLevelId" Type="Int32" />
+    <Property Name="colSyllabusDocUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colTestPlanUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colDevelopmentOfficer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colUploadBy" Type="Int32" />
+    <Property Name="colUploadDt" Type="DateTime" Precision="3" />
+    <Property Name="colActiveDt" Type="DateTime" Precision="3" />
+    <Property Name="colSt" Type="Boolean" />
+    <Property Name="colEndDt" Type="DateTime" Precision="3" />
+    <Property Name="colTheoryId" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSyllabusLanguage">
+    <Key>
+      <PropertyRef Name="colSyllabusId" />
+      <PropertyRef Name="colLanguageId" />
+    </Key>
+    <Property Name="colSyllabusId" Type="Int32" Nullable="false" />
+    <Property Name="colLanguageId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTrade">
+    <Key>
+      <PropertyRef Name="colTradeId" />
+    </Key>
+    <Property Name="colTradeId" Type="Int32" Nullable="false" />
+    <Property Name="colTradeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colTradeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="colAbbreviation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="colSt" Type="Boolean" Nullable="false" />
+    <Property Name="colChineseTradeName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="colThaiTradeName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="colTamilTradeName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="colKoreanTradeName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LABTestDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblLanguages" EntityType="Self.tblLanguage" />
+    <EntitySet Name="tblLevels" EntityType="Self.tblLevel" />
+    <EntitySet Name="tblSyllabus" EntityType="Self.tblSyllabu" />
+    <EntitySet Name="tblSyllabusLanguages" EntityType="Self.tblSyllabusLanguage" />
+    <EntitySet Name="tblTrades" EntityType="Self.tblTrade" />
+  </EntityContainer>
+</Schema>
